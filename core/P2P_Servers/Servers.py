@@ -1,3 +1,5 @@
+from concurrent.futures import ThreadPoolExecutor
+
 import redis
 from flask import Flask
 
@@ -9,3 +11,4 @@ class Servers:
                                 password=password,
                                 db=db)
         self.app = Flask(__name__)
+        self.executor = ThreadPoolExecutor(2)
