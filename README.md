@@ -1,2 +1,12 @@
 # P2P-Notification
-Forward phone notifications to PC in an easy way.
+
+## 通过IFTTT转发来在PC上接收手机通知
+
+手机-->IFTTT-->开启了服务的服务器-->redis发布订阅-->pc客户端接收-->调用win弹窗通知显示
+
+2021年12月20日：
+
+基本解决了弹窗显示的问题，现在可以留存通知内容在通知中心里（win10、11），\
+在大量消息被接收时，弹窗不会阻塞只显示第一个，并且可以按顺序连续显示。
+
+
