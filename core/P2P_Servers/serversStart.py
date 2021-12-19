@@ -1,6 +1,8 @@
 import os
 from configparser import ConfigParser
+
 from flask import request
+
 from Servers import Servers
 
 config = ConfigParser()
@@ -21,9 +23,13 @@ def received():
 
     :return: 随便返回了点什么
     """
-    user = request.data.decode("UTF-8")
-    servers.conn.publish("notification", user)
-    return "400"
+    data = request.data.decode("UTF-8")
+    servers.conn.executor.submit(publish, data)
+    return "OK"
+
+
+def publish(data):
+    servers.conn.publish("notification", data)
 
 
 if __name__ == '__main__':
