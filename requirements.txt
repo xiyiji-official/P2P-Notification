@@ -1,3 +1,5 @@
 Flask==2.0.2
 redis==4.0.2
 win10toast==0.9
+
+plyer~=2.0.0
