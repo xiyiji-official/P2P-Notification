@@ -13,6 +13,6 @@ def show(n_list):
     print(message)
     notification.notify(title=n_list["AppName"],  # 弹窗标题
                         message=message,  # 弹窗内容
-                        app_icon="./Icon/" + icon,  # 弹窗图标（None就是python的图标）
+                        app_icon="./ico/" + icon,  # 弹窗图标（None就是python的图标）
                         timeout=30,  # 弹窗显示时间
                         )
