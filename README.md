@@ -1,6 +1,6 @@
 # P2P-Notification
 
-## 通过IFTTT转发来在PC上接收手机通知
+## 通过~~IFTTT~~Notification-Sender转发来在PC上接收手机通知
 
 ~~手机-->IFTTT-->开启了服务的服务器-->redis发布订阅-->pc客户端接收-->调用win弹窗通知显示~~
 
